@@ -1,11 +1,12 @@
 # Copyright (C) 2021 Toitware ApS. All rights reserved.
 # Use of this source code is governed by an MIT-style license that can be found in the LICENSE file.
 
-# Specification file for the weather-station.toit program.
+# Specification file for the weather_station.toit program
+# which describes when and how often the program must run on the device.
 
 name: THP
 
-entrypoint: weather-station.toit
+entrypoint: weather_station.toit
 triggers:
     on_install: true
     on_interval: 30s
