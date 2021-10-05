@@ -7,16 +7,16 @@ Program measuring temperature, relative humidity, and atmospheric pressure
 */
 
 import gpio
-import serial.protocols.i2c as i2c
-import drivers.bme280
+import i2c
+import drivers.bme280 as drivers
 
 main:
   bus := i2c.Bus
     --sda=gpio.Pin 21
     --scl=gpio.Pin 22
-  device := bus.device 0x77
+  device := bus.device drivers.Bme280.I2C_ADDRESS_ALT
   bme := drivers.Bme280 device
-  
+
   bme.on
   print "Temperature: $bme.read_temperature C"
   print "Humidity: $bme.read_humidity %"
