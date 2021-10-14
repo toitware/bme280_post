@@ -4,9 +4,8 @@
 # Specification file for the weather_station.toit program
 # which describes when and how often the program must run on the device.
 
-name: THP
-
+name: Weather Station
 entrypoint: weather_station.toit
 triggers:
-    on_install: true
-    on_interval: 30s
+  on_install: true
+  on_interval: 30s
